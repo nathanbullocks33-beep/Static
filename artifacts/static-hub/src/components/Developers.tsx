@@ -11,7 +11,7 @@ const TEAM = [
   {
     name: "Crucify (slaughterbroleniggas)",
     role: "Site Developer",
-    image: "https://cdn.discordapp.com/attachments/1484461011657560135/1486193673195491379/26503296-9322-4CCD-A8F3-A8F26005F9C7.gif?ex=69c49d37&is=69c34bb7&hm=8731613ad172881b9e15825a30f8b21e462fa1ec0b3fac46b4dce68f3a963cec&",
+    image: "https://media.discordapp.net/attachments/1481491303920566436/1485474722304229557/IMG_2420.jpg?ex=69c5f424&is=69c4a2a4&hm=6e2971c75538243c7ebb63e12ee2dbcf5bf098dcbd8a9418bd38a1a3ed61a140&=&format=webp&width=578&height=605",
     initial: "C",
   },
 ];

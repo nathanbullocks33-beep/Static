@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { SupportedGames } from "@/components/SupportedGames";
 import { Pricing } from "@/components/Pricing";
 import { PaymentMethods } from "@/components/PaymentMethods";
-import { Developers } from "@/components/Developers";
 import { Footer } from "@/components/Footer";
 import { CursorGlow } from "@/components/CursorGlow";
 
@@ -17,7 +16,6 @@ export default function Home() {
         <SupportedGames />
         <Pricing />
         <PaymentMethods />
-        <Developers />
       </main>
       <Footer />
     </div>

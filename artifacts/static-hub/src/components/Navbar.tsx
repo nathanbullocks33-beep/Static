@@ -13,7 +13,6 @@ const NAV_LINKS = [
   { name: "Home", href: "#home" },
   { name: "Games", href: "#supported-games" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Free Key", href: "https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea", external: true },
   { name: "Payment Methods", href: "#payment-methods" },
 ];
 
@@ -71,19 +70,9 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                onClick={(e) => scrollToSection(e, link.href, link.external)}
-                className={cn(
-                  "text-xs font-semibold uppercase tracking-wider transition-all duration-300",
-                  link.name === "Free Key"
-                    ? "text-green-400 hover:text-green-300 flex items-center gap-1.5"
-                    : "text-muted-foreground hover:text-white"
-                )}
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="text-xs font-semibold uppercase tracking-wider transition-all duration-300 text-muted-foreground hover:text-white"
               >
-                {link.name === "Free Key" && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />
-                )}
                 {link.name}
               </a>
             ))}
@@ -91,6 +80,15 @@ export function Navbar() {
 
           {/* CTAs */}
           <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-green-600 hover:bg-green-500 shadow-lg shadow-green-600/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 uppercase tracking-wider"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse inline-block" />
+              Free Key
+            </a>
             <a
               href="https://static.sellhub.cx/"
               target="_blank"
@@ -134,23 +132,22 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  target={link.external ? "_blank" : undefined}
-                  rel={link.external ? "noopener noreferrer" : undefined}
-                  onClick={(e) => scrollToSection(e, link.href, link.external)}
-                  className={cn(
-                    "text-sm font-medium transition-colors px-2 py-3 border-b border-white/5 last:border-none flex items-center gap-2",
-                    link.name === "Free Key"
-                      ? "text-green-400"
-                      : "text-muted-foreground hover:text-white"
-                  )}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className="text-sm font-medium transition-colors px-2 py-3 border-b border-white/5 last:border-none flex items-center gap-2 text-muted-foreground hover:text-white"
                 >
-                  {link.name === "Free Key" && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />
-                  )}
                   {link.name}
                 </a>
               ))}
               <div className="pt-4 flex flex-col gap-3">
+                <a
+                  href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 h-11 rounded-lg bg-green-600 hover:bg-green-500 text-white text-sm font-bold shadow-lg shadow-green-600/25 transition-colors"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse inline-block" />
+                  Free Key
+                </a>
                 <a
                   href="https://static.sellhub.cx/"
                   target="_blank"

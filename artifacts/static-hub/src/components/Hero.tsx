@@ -50,51 +50,51 @@ export function Hero() {
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-400">24/7 Support</span>
           </motion.div>
 
-          {/* CTA Buttons — 2×2 grid */}
+          {/* CTA Buttons — horizontal row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-col items-center gap-6 w-full max-w-xs"
+            className="flex flex-wrap items-center justify-center gap-3"
           >
-            {/* Buy Now — black */}
+            {/* Buy Now */}
             <a
               href="https://static.sellhub.cx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center px-6 py-2.5 rounded-lg font-bold text-xs text-white bg-black border border-white/15 hover:bg-white/5 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest"
+              className="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-[#1c1c1c] border border-white/20 hover:bg-[#252525] hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest"
             >
               Buy Now
             </a>
 
-            {/* Watch Showcases — red */}
+            {/* Watch Showcases */}
             <a
               href="https://www.youtube.com/@StaticHub"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg font-semibold text-xs text-white bg-red-600/90 hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-red-600/20"
+              className="px-7 py-3.5 rounded-xl font-semibold text-sm text-white bg-[#141414] border border-white/12 hover:bg-[#1c1c1c] hover:border-white/20 hover:-translate-y-0.5 flex items-center gap-2.5 transition-all duration-300"
             >
-              <Play className="w-3 h-3" fill="currentColor" />
-              Showcases
+              <Play className="w-3.5 h-3.5 text-gray-300" fill="currentColor" />
+              Watch Showcases
             </a>
 
-            {/* Free Key — green */}
+            {/* Free Key */}
             <a
               href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg font-semibold text-xs text-white bg-green-600/90 hover:bg-green-600 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider shadow-lg shadow-green-600/20"
+              className="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-[#1c1c1c] border border-white/20 hover:bg-[#252525] hover:border-white/30 hover:-translate-y-0.5 flex items-center gap-2 transition-all duration-300 uppercase tracking-widest"
             >
-              <Key className="w-3 h-3" />
+              <Key className="w-3.5 h-3.5" />
               Free Key
             </a>
 
-            {/* Join Discord — discord blue */}
+            {/* Join Discord — ghost */}
             <a
               href="https://discord.gg/dWrW52vNy"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-semibold text-xs text-white bg-[#5865F2] hover:bg-[#4752C4] hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#5865F2]/25"
+              className="px-5 py-3.5 rounded-xl font-semibold text-sm text-white/45 hover:text-white/70 flex items-center gap-2.5 transition-all duration-300"
             >
               <DiscordIcon />
               Join Discord

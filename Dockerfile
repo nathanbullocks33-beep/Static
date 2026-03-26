@@ -1,4 +1,4 @@
-FROM node:20-alpine AS builder
+FROM node:20-slim AS builder
 
 RUN corepack enable && corepack prepare pnpm@10.26.1 --activate
 
@@ -15,7 +15,7 @@ ENV BASE_PATH=/
 
 RUN pnpm --filter @workspace/static-hub run build
 
-FROM node:20-alpine
+FROM node:20-slim
 
 RUN npm install -g serve
 

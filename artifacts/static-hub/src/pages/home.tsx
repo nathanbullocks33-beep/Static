@@ -4,10 +4,12 @@ import { SupportedGames } from "@/components/SupportedGames";
 import { Pricing } from "@/components/Pricing";
 import { PaymentMethods } from "@/components/PaymentMethods";
 import { Footer } from "@/components/Footer";
+import { CursorGlow } from "@/components/CursorGlow";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col selection:bg-primary/30 overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground flex flex-col selection:bg-primary/30 overflow-x-hidden">
+      <CursorGlow />
       <Navbar />
       <main className="flex-1">
         <Hero />

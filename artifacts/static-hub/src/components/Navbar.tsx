@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { name: "Home", href: "#home" },
   { name: "Games", href: "#supported-games" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Free Script", href: "https://discord.gg/dWrW52vNy", external: true },
+  { name: "Free Script", href: "https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea", external: true },
   { name: "Payment Methods", href: "#payment-methods" },
 ];
 
@@ -22,9 +22,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

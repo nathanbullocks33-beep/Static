@@ -36,9 +36,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold mb-5 leading-tight"
           >
-            The Best Fias Script
-            <br className="hidden sm:block" />
-            <span className="text-gradient-primary"> Created.</span>
+            <span className="text-gradient-primary">Static Hub</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -59,7 +57,6 @@ export function Hero() {
             className="flex flex-wrap items-center justify-center gap-3 mb-10"
           >
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-400">1 Supported Game</span>
-            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-400">99.9% Undetected</span>
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-400">24/7 Support</span>
           </motion.div>
 

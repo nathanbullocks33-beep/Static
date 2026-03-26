@@ -1,58 +1,127 @@
-import { Terminal } from "lucide-react";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
-    <footer className="border-t border-white/10 bg-background/50 pt-16 pb-8 relative overflow-hidden">
-      {/* Decorative blur */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-32 bg-primary/10 blur-[100px] pointer-events-none"></div>
+    <footer className="bg-[#080808] border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+      {/* Decorative gradient at the bottom */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-500 p-[1px]">
-                <div className="w-full h-full bg-background rounded-[7px] flex items-center justify-center">
-                  <Terminal className="w-4 h-4 text-primary" />
-                </div>
-              </div>
-              <span className="font-display font-bold text-xl text-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 mb-16">
+          
+          {/* Left Column */}
+          <div className="flex flex-col items-start gap-6">
+            <div className="flex items-center gap-3">
+              <img 
+                src="/images/static-logo.jpeg" 
+                alt="Static Hub" 
+                className="w-10 h-10 rounded object-cover shadow-lg shadow-primary/20" 
+              />
+              <span className="font-display font-bold text-2xl text-white">
                 Static Hub
               </span>
             </div>
-            <p className="text-muted-foreground text-sm text-center md:text-left max-w-xs">
-              The premier script hub experience. Designed for performance, security, and ease of use.
+            <p className="text-muted-foreground text-base leading-relaxed max-w-sm">
+              Premium Roblox scripts for elite players. Delivering unmatched performance, security, and features.
             </p>
+            <div className="flex items-center gap-4 pt-2">
+              <a 
+                href="https://discord.gg/dWrW52vNy" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 shadow-sm"
+                aria-label="Discord"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/>
+                </svg>
+              </a>
+            </div>
           </div>
           
-          <div className="flex flex-col items-center md:items-end gap-4">
-            <h4 className="text-white font-semibold">Community</h4>
-            <a 
-              href="https://discord.gg/dWrW52vNy" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
-            >
-              Join our Discord server
-            </a>
-            <a 
-              href="https://youtu.be/owO1LNCPa-Y" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Watch Showcase
-            </a>
+          {/* Center Column */}
+          <div className="flex flex-col gap-4 md:pl-10">
+            <h4 className="text-white font-bold text-lg mb-2">Quick Links</h4>
+            <ul className="space-y-3">
+              {[
+                { name: "Home", href: "#home" },
+                { name: "Games", href: "#supported-games" },
+                { name: "Pricing", href: "#pricing" },
+                { name: "Payment Methods", href: "#payment-methods" },
+              ].map(link => (
+                <li key={link.name}>
+                  <a 
+                    href={link.href} 
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Right Column */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-white font-bold text-lg mb-2">Get Started</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="https://static.sellhub.cx/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium flex items-center gap-2"
+                >
+                  Buy Script
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://youtu.be/owO1LNCPa-Y" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium flex items-center gap-2"
+                >
+                  Watch Showcase
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://discord.gg/dWrW52vNy" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium flex items-center gap-2"
+                >
+                  Join Discord
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
+        {/* Bottom Bar */}
+        <div className="relative pt-8 flex items-center justify-center">
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+          <p className="text-muted-foreground/60 text-sm font-medium">
             &copy; {currentYear} Static Hub. All rights reserved.
-          </p>
-          <p className="text-muted-foreground/50 text-xs text-center">
-            Not affiliated with Roblox Corporation.
           </p>
         </div>
       </div>

@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.git
+.local
+.cache
+.replit
+replit.nix
+attached_assets
+scripts
+artifacts/api-server
+artifacts/mockup-sandbox

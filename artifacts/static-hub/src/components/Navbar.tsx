@@ -26,16 +26,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, external?: boolean) => {
-    if (external) return;
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
       const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+      const offsetPosition = elementRect - bodyRect - offset;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
     setMobileMenuOpen(false);
@@ -81,19 +79,10 @@ export function Navbar() {
           {/* CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-green-600 hover:bg-green-500 shadow-lg shadow-green-600/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 uppercase tracking-wider"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse inline-block" />
-              Free Key
-            </a>
-            <a
               href="https://static.sellhub.cx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 rounded-lg text-xs font-semibold text-white border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 uppercase tracking-wider"
+              className="px-5 py-2 rounded-lg text-xs font-semibold text-white border border-white/10 hover:border-white/25 hover:bg-white/5 transition-all duration-300 uppercase tracking-wider"
             >
               Store
             </a>
@@ -139,15 +128,6 @@ export function Navbar() {
                 </a>
               ))}
               <div className="pt-4 flex flex-col gap-3">
-                <a
-                  href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 h-11 rounded-lg bg-green-600 hover:bg-green-500 text-white text-sm font-bold shadow-lg shadow-green-600/25 transition-colors"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse inline-block" />
-                  Free Key
-                </a>
                 <a
                   href="https://static.sellhub.cx/"
                   target="_blank"

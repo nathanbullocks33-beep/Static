@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Play, Check, ShieldCheck } from "lucide-react";
+import { Play, Key } from "lucide-react";
 
 const DiscordIcon = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -12,7 +12,7 @@ export function Hero() {
     <section id="home" className="relative min-h-screen w-full flex items-center justify-center pt-20 pb-16 overflow-hidden bg-[#080808]">
       {/* Background grid */}
       <div className="absolute inset-0 w-full h-full -z-10 grid-bg opacity-20"></div>
-      {/* Subtle orbs — much more muted */}
+      {/* Subtle orbs */}
       <div className="absolute top-[15%] left-[5%] w-[500px] h-[500px] bg-white/4 rounded-full blur-[140px] pointer-events-none -z-10"></div>
       <div className="absolute bottom-[5%] right-[5%] w-[600px] h-[600px] bg-white/3 rounded-full blur-[180px] pointer-events-none -z-10"></div>
 
@@ -55,7 +55,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-20"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
           >
             <a
               href="https://static.sellhub.cx/"
@@ -77,6 +77,16 @@ export function Hero() {
             </a>
 
             <a
+              href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm text-white bg-green-600 hover:bg-green-500 shadow-lg shadow-green-600/20 hover:-translate-y-0.5 flex items-center justify-center gap-2.5 transition-all duration-300 uppercase tracking-widest"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse" />
+              Free Key
+            </a>
+
+            <a
               href="https://discord.gg/dWrW52vNy"
               target="_blank"
               rel="noopener noreferrer"
@@ -85,42 +95,6 @@ export function Hero() {
               <DiscordIcon />
               Join Discord
             </a>
-          </motion.div>
-
-          {/* Floating Feature Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-full max-w-sm mx-auto animate-float"
-          >
-            <div className="glass-panel p-5 rounded-2xl text-left shadow-2xl shadow-black/60" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
-              <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/8">
-                <div className="flex items-center gap-2.5">
-                  <ShieldCheck className="w-5 h-5 text-white/50" />
-                  <h3 className="font-display font-bold text-sm text-white tracking-wide">Static Script</h3>
-                </div>
-                <div className="flex items-center gap-1.5 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                  <span className="text-xs font-bold text-green-400">Active</span>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                {[
-                  "Free and Paid version",
-                  "Auto Farm & Auto Play",
-                  "Bypass Detection"
-                ].map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-white/8 flex items-center justify-center border border-white/15 shrink-0">
-                      <Check className="w-3 h-3 text-white/60" strokeWidth={3} />
-                    </div>
-                    <span className="text-xs text-gray-300 font-medium">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
         </div>

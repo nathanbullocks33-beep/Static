@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { name: "Home", href: "#home" },
   { name: "Games", href: "#supported-games" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Free Script", href: "https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea", external: true },
+  { name: "Free Key", href: "https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea", external: true },
   { name: "Payment Methods", href: "#payment-methods" },
 ];
 
@@ -76,12 +76,12 @@ export function Navbar() {
                 onClick={(e) => scrollToSection(e, link.href, link.external)}
                 className={cn(
                   "text-xs font-semibold uppercase tracking-wider transition-all duration-300",
-                  link.name === "Free Script"
+                  link.name === "Free Key"
                     ? "text-green-400 hover:text-green-300 flex items-center gap-1.5"
                     : "text-muted-foreground hover:text-white"
                 )}
               >
-                {link.name === "Free Script" && (
+                {link.name === "Free Key" && (
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />
                 )}
                 {link.name}
@@ -139,12 +139,12 @@ export function Navbar() {
                   onClick={(e) => scrollToSection(e, link.href, link.external)}
                   className={cn(
                     "text-sm font-medium transition-colors px-2 py-3 border-b border-white/5 last:border-none flex items-center gap-2",
-                    link.name === "Free Script"
+                    link.name === "Free Key"
                       ? "text-green-400"
                       : "text-muted-foreground hover:text-white"
                   )}
                 >
-                  {link.name === "Free Script" && (
+                  {link.name === "Free Key" && (
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />
                   )}
                   {link.name}

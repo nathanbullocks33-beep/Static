@@ -68,13 +68,13 @@ export function Hero() {
             </a>
 
             <a
-              href="https://youtu.be/owO1LNCPa-Y"
+              href="https://www.youtube.com/@StaticHub"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/12 hover:bg-white/10 hover:border-white/25 flex items-center justify-center gap-2.5 transition-all duration-300"
             >
               <Play className="w-4 h-4 text-gray-300" fill="currentColor" />
-              Watch Showcase
+              Watch Showcases
             </a>
 
             <a
@@ -99,7 +99,7 @@ export function Hero() {
               <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/8">
                 <div className="flex items-center gap-2.5">
                   <ShieldCheck className="w-5 h-5 text-primary" />
-                  <h3 className="font-display font-bold text-sm text-white tracking-wide">Static v2.0</h3>
+                  <h3 className="font-display font-bold text-sm text-white tracking-wide">Static Script</h3>
                 </div>
                 <div className="flex items-center gap-1.5 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>

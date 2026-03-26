@@ -80,9 +80,8 @@ export function Hero() {
               href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm text-white bg-green-600 hover:bg-green-500 shadow-lg shadow-green-600/20 hover:-translate-y-0.5 flex items-center justify-center gap-2.5 transition-all duration-300 uppercase tracking-widest"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2.5 transition-all duration-300 uppercase tracking-widest"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse" />
               Free Key
             </a>
 

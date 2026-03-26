@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Static Hub"
+version = "1.0.0"
+id = "artifacts/static-hub"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22623
+
+[services.development]
+run = "pnpm --filter @workspace/static-hub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/static-hub", "run", "build" ]
+publicDir = "artifacts/static-hub/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22623"
+BASE_PATH = "/"

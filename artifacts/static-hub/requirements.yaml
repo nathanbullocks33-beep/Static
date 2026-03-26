@@ -1,0 +1,14 @@
+packages:
+  "framer-motion": "For smooth scroll animations, reveal effects, and premium feel"
+  "clsx": "For constructing className strings conditionally"
+  "tailwind-merge": "For merging tailwind classes efficiently"
+
+images:
+  - path: "artifacts/static-hub/public/images/hero-bg.png"
+    description: "Abstract futuristic dark mesh gradient background with deep purple and neon blue glowing accents, subtle grid lines, very professional gaming aesthetic"
+    aspect_ratio: "16:9"
+
+notes:
+  - This is a pure frontend landing page without a backend API.
+  - Using framer-motion for entrance animations.
+  - Smooth scrolling implemented via native CSS scroll-behavior.

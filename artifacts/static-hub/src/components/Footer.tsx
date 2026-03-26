@@ -31,11 +31,11 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img 
                 src="/images/static-logo.jpeg" 
-                alt="Static Hub" 
+                alt="Static" 
                 className="w-10 h-10 rounded object-cover shadow-lg shadow-primary/20" 
               />
               <span className="font-display font-bold text-2xl text-white">
-                Static Hub
+                Static
               </span>
             </div>
             <p className="text-muted-foreground text-base leading-relaxed max-w-sm">
@@ -121,7 +121,7 @@ export function Footer() {
         <div className="relative pt-8 flex items-center justify-center">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
           <p className="text-muted-foreground/60 text-sm font-medium">
-            &copy; {currentYear} Static Hub. All rights reserved.
+            &copy; {currentYear} Static. All rights reserved.
           </p>
         </div>
       </div>

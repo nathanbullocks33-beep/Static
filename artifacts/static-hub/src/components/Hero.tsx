@@ -42,7 +42,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed font-medium"
           >
-            Static Hub delivers elite-grade scripts with unmatched performance. Dominate every game you play.
+            Static delivers elite-grade scripts with unmatched performance. Dominate every game you play.
           </motion.p>
 
           <motion.div 
@@ -101,7 +101,7 @@ export function Hero() {
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="w-6 h-6 text-primary" />
-                  <h3 className="font-display font-bold text-xl text-white">Static Hub v2.0</h3>
+                  <h3 className="font-display font-bold text-xl text-white">Static v2.0</h3>
                 </div>
                 <div className="flex items-center gap-2 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>

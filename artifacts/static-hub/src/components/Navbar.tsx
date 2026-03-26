@@ -55,11 +55,11 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <img 
               src="/images/static-logo.jpeg" 
-              alt="Static Hub" 
+              alt="Static" 
               className="w-10 h-10 rounded object-cover shadow-lg shadow-primary/20" 
             />
             <span className="font-display font-bold text-2xl tracking-tight text-white">
-              Static Hub
+              Static
             </span>
           </div>
 

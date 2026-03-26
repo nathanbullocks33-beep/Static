@@ -60,7 +60,7 @@ export function Footer() {
               {[
                 { name: "Home", href: "#home" },
                 { name: "Games", href: "#supported-games" },
-                { name: "Pricing", href: "#pricing" },
+                { name: "Purchase", href: "#pricing" },
                 { name: "Payment Methods", href: "#payment-methods" },
               ].map(link => (
                 <li key={link.name}>

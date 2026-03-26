@@ -32,6 +32,18 @@ const EXECUTORS = [
     multiInject: true,
     note: null,
   },
+  {
+    name: "Wave",
+    version: "NEW-1.2.0",
+    tags: ["sUNC", "$5.99 Weekly"],
+    website: "https://getwave.gg/",
+    discord: "https://discord.com/invite/rARhPpN7fY",
+    uncPercent: 99,
+    suncPercent: 100,
+    decompiler: true,
+    multiInject: true,
+    note: "This exploit bypasses client modification bans but could still be affected by banwaves",
+  },
 ];
 
 export function Executors() {

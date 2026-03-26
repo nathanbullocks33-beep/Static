@@ -50,7 +50,7 @@ export function Pricing() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient mb-5"
           >
-            Pricing
+            Purchase
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

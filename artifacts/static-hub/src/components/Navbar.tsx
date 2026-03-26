@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { name: "Home", href: "#home" },
   { name: "Executors", href: "#executors" },
   { name: "Games", href: "#supported-games" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Purchase", href: "#pricing" },
   { name: "Payment Methods", href: "#payment-methods" },
 ];
 

@@ -55,14 +55,14 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="grid grid-cols-2 gap-3 w-full max-w-sm sm:max-w-md"
+            className="grid grid-cols-2 gap-5 w-full max-w-xs"
           >
             {/* Buy Now — white */}
             <a
               href="https://static.sellhub.cx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="col-span-2 flex items-center justify-center px-8 py-4 rounded-xl font-bold text-sm text-black bg-white hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest shadow-lg shadow-white/10"
+              className="col-span-2 flex items-center justify-center px-6 py-2.5 rounded-lg font-bold text-xs text-black bg-white hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest shadow-lg shadow-white/10"
             >
               Buy Now
             </a>
@@ -72,9 +72,9 @@ export function Hero() {
               href="https://www.youtube.com/@StaticHub"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-white bg-red-600/90 hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-red-600/20"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg font-semibold text-xs text-white bg-red-600/90 hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-red-600/20"
             >
-              <Play className="w-4 h-4" fill="currentColor" />
+              <Play className="w-3 h-3" fill="currentColor" />
               Showcases
             </a>
 
@@ -83,9 +83,9 @@ export function Hero() {
               href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-white bg-green-600/90 hover:bg-green-600 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider shadow-lg shadow-green-600/20"
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg font-semibold text-xs text-white bg-green-600/90 hover:bg-green-600 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider shadow-lg shadow-green-600/20"
             >
-              <Key className="w-4 h-4" />
+              <Key className="w-3 h-3" />
               Free Key
             </a>
 
@@ -94,7 +94,7 @@ export function Hero() {
               href="https://discord.gg/dWrW52vNy"
               target="_blank"
               rel="noopener noreferrer"
-              className="col-span-2 flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl font-semibold text-sm text-white bg-[#5865F2] hover:bg-[#4752C4] hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#5865F2]/25"
+              className="col-span-2 flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-semibold text-xs text-white bg-[#5865F2] hover:bg-[#4752C4] hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#5865F2]/25"
             >
               <DiscordIcon />
               Join Discord

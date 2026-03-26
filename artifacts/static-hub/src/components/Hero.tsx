@@ -11,11 +11,10 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen w-full flex items-center justify-center pt-20 pb-16 overflow-hidden bg-[#080808]">
       {/* Background grid */}
-      <div className="absolute inset-0 w-full h-full -z-10 grid-bg opacity-40"></div>
-      {/* Orbs */}
-      <div className="absolute top-[15%] left-[5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[130px] pointer-events-none -z-10 animate-pulse-glow"></div>
-      <div className="absolute bottom-[5%] right-[5%] w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[160px] pointer-events-none -z-10"></div>
-      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+      <div className="absolute inset-0 w-full h-full -z-10 grid-bg opacity-20"></div>
+      {/* Subtle orbs — much more muted */}
+      <div className="absolute top-[15%] left-[5%] w-[500px] h-[500px] bg-white/4 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+      <div className="absolute bottom-[5%] right-[5%] w-[600px] h-[600px] bg-white/3 rounded-full blur-[180px] pointer-events-none -z-10"></div>
 
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
@@ -25,9 +24,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold mb-6 leading-none tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold mb-6 leading-none tracking-tight text-white"
           >
-            <span className="text-gradient-primary">Static Hub</span>
+            Static Hub
           </motion.h1>
 
           {/* Subtitle */}
@@ -62,7 +61,7 @@ export function Hero() {
               href="https://static.sellhub.cx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-10 py-4 rounded-xl font-bold text-sm text-white bg-primary hover:bg-primary/90 shadow-[0_0_40px_rgba(0,212,255,0.35)] hover:shadow-[0_0_70px_rgba(0,212,255,0.5)] hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest"
+              className="w-full sm:w-auto px-10 py-4 rounded-xl font-bold text-sm text-white bg-white/10 border border-white/15 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest"
             >
               Buy Now
             </a>
@@ -71,7 +70,7 @@ export function Hero() {
               href="https://www.youtube.com/@StaticHub"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/12 hover:bg-white/10 hover:border-white/25 flex items-center justify-center gap-2.5 transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2.5 transition-all duration-300"
             >
               <Play className="w-4 h-4 text-gray-300" fill="currentColor" />
               Watch Showcases
@@ -95,10 +94,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="w-full max-w-sm mx-auto animate-float"
           >
-            <div className="glass-panel p-5 rounded-2xl text-left shadow-2xl shadow-black/60" style={{ border: "1px solid rgba(0,212,255,0.12)" }}>
+            <div className="glass-panel p-5 rounded-2xl text-left shadow-2xl shadow-black/60" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
               <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/8">
                 <div className="flex items-center gap-2.5">
-                  <ShieldCheck className="w-5 h-5 text-primary" />
+                  <ShieldCheck className="w-5 h-5 text-white/50" />
                   <h3 className="font-display font-bold text-sm text-white tracking-wide">Static Script</h3>
                 </div>
                 <div className="flex items-center gap-1.5 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">
@@ -114,8 +113,8 @@ export function Hero() {
                   "Bypass Detection"
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center border border-primary/25 shrink-0">
-                      <Check className="w-3 h-3 text-primary" strokeWidth={3} />
+                    <div className="w-5 h-5 rounded-full bg-white/8 flex items-center justify-center border border-white/15 shrink-0">
+                      <Check className="w-3 h-3 text-white/60" strokeWidth={3} />
                     </div>
                     <span className="text-xs text-gray-300 font-medium">{feature}</span>
                   </div>

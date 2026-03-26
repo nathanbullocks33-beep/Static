@@ -50,46 +50,51 @@ export function Hero() {
             <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-400">24/7 Support</span>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons — 2×2 grid */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
+            className="grid grid-cols-2 gap-3 w-full max-w-sm sm:max-w-md"
           >
+            {/* Buy Now — white */}
             <a
               href="https://static.sellhub.cx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-10 py-4 rounded-xl font-bold text-sm text-white bg-white/10 border border-white/15 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest"
+              className="col-span-2 flex items-center justify-center px-8 py-4 rounded-xl font-bold text-sm text-black bg-white hover:bg-gray-100 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest shadow-lg shadow-white/10"
             >
               Buy Now
             </a>
 
+            {/* Watch Showcases — red (YouTube) */}
             <a
               href="https://www.youtube.com/@StaticHub"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2.5 transition-all duration-300"
+              className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-white bg-red-600/90 hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-red-600/20"
             >
-              <Play className="w-4 h-4 text-gray-300" fill="currentColor" />
-              Watch Showcases
+              <Play className="w-4 h-4" fill="currentColor" />
+              Showcases
             </a>
 
+            {/* Free Key — green */}
             <a
               href="https://ads.luarmor.net/get_key?for=Static-OWulwoDvNPea"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2.5 transition-all duration-300 uppercase tracking-widest"
+              className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-white bg-green-600/90 hover:bg-green-600 hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider shadow-lg shadow-green-600/20"
             >
+              <Key className="w-4 h-4" />
               Free Key
             </a>
 
+            {/* Join Discord — discord blue, full width */}
             <a
               href="https://discord.gg/dWrW52vNy"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white/50 hover:text-white hover:bg-white/5 flex items-center justify-center gap-2.5 transition-all duration-300"
+              className="col-span-2 flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl font-semibold text-sm text-white bg-[#5865F2] hover:bg-[#4752C4] hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#5865F2]/25"
             >
               <DiscordIcon />
               Join Discord

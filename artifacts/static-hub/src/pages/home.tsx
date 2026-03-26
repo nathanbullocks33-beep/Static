@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { Executors } from "@/components/Executors";
 import { SupportedGames } from "@/components/SupportedGames";
 import { Pricing } from "@/components/Pricing";
 import { PaymentMethods } from "@/components/PaymentMethods";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 w-full">
         <Hero />
+        <Executors />
         <SupportedGames />
         <Pricing />
         <PaymentMethods />

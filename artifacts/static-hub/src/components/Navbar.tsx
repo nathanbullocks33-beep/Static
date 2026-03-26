@@ -11,6 +11,7 @@ const DiscordIcon = () => (
 
 const NAV_LINKS = [
   { name: "Home", href: "#home" },
+  { name: "Executors", href: "#executors" },
   { name: "Games", href: "#supported-games" },
   { name: "Pricing", href: "#pricing" },
   { name: "Payment Methods", href: "#payment-methods" },
@@ -50,31 +51,43 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2.5">
+          {/* Logo + Nav grouped together on the left */}
+          <div className="hidden lg:flex items-center gap-8">
+            <div className="flex items-center gap-2.5">
+              <img
+                src="/images/static-logo.jpeg"
+                alt="Static"
+                className="w-8 h-8 rounded object-cover shadow-lg shadow-primary/20"
+              />
+              <span className="font-display font-bold text-lg tracking-tight text-white">
+                Static
+              </span>
+            </div>
+            <nav className="flex items-center gap-6">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className="text-xs font-semibold uppercase tracking-wider transition-all duration-300 text-muted-foreground hover:text-white"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Mobile: logo only */}
+          <div className="lg:hidden flex items-center gap-2.5">
             <img
               src="/images/static-logo.jpeg"
               alt="Static"
-              className="w-8 h-8 rounded object-cover shadow-lg shadow-primary/20"
+              className="w-8 h-8 rounded object-cover"
             />
             <span className="font-display font-bold text-lg tracking-tight text-white">
               Static
             </span>
           </div>
-
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-7">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-xs font-semibold uppercase tracking-wider transition-all duration-300 text-muted-foreground hover:text-white"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
 
           {/* CTAs */}
           <div className="hidden lg:flex items-center gap-3">

@@ -9,32 +9,23 @@ const DiscordIcon = () => (
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#080808]">
-      {/* Background */}
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center pt-20 pb-16 overflow-hidden bg-[#080808]">
+      {/* Background grid */}
       <div className="absolute inset-0 w-full h-full -z-10 grid-bg opacity-40"></div>
-      <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-primary/15 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-glow"></div>
-      <div className="absolute bottom-[10%] right-[10%] w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+      {/* Orbs */}
+      <div className="absolute top-[15%] left-[5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[130px] pointer-events-none -z-10 animate-pulse-glow"></div>
+      <div className="absolute bottom-[5%] right-[5%] w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
-
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel mb-8 border-primary/30"
-          >
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_6px_rgba(34,197,94,0.8)]"></div>
-            <span className="text-xs font-semibold text-primary uppercase tracking-widest">Now Available</span>
-          </motion.div>
 
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold mb-5 leading-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold mb-6 leading-none tracking-tight"
           >
             <span className="text-gradient-primary">Static Hub</span>
           </motion.h1>
@@ -44,9 +35,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-7 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed"
           >
-            Static delivers elite-grade scripts with unmatched performance. Dominate every game you play.
+            Elite-grade Roblox scripts with unmatched performance. Dominate every lobby you join.
           </motion.p>
 
           {/* Stats */}
@@ -65,13 +56,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-20"
           >
             <a
               href="https://static.sellhub.cx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-primary hover:bg-primary/90 glow-cyan hover:shadow-[0_0_60px_rgba(0,212,255,0.25)] hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider"
+              className="w-full sm:w-auto px-10 py-4 rounded-xl font-bold text-sm text-white bg-primary hover:bg-primary/90 shadow-[0_0_40px_rgba(0,212,255,0.35)] hover:shadow-[0_0_70px_rgba(0,212,255,0.5)] hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-widest"
             >
               Buy Now
             </a>
@@ -80,7 +71,7 @@ export function Hero() {
               href="https://youtu.be/owO1LNCPa-Y"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2.5 transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/5 border border-white/12 hover:bg-white/10 hover:border-white/25 flex items-center justify-center gap-2.5 transition-all duration-300"
             >
               <Play className="w-4 h-4 text-gray-300" fill="currentColor" />
               Watch Showcase
@@ -90,7 +81,7 @@ export function Hero() {
               href="https://discord.gg/dWrW52vNy"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-sm text-white/60 hover:text-white hover:bg-white/5 flex items-center justify-center gap-2.5 transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm text-white/50 hover:text-white hover:bg-white/5 flex items-center justify-center gap-2.5 transition-all duration-300"
             >
               <DiscordIcon />
               Join Discord
@@ -102,13 +93,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-full max-w-md mx-auto animate-float"
+            className="w-full max-w-sm mx-auto animate-float"
           >
-            <div className="glass-panel p-5 rounded-2xl text-left border-t border-t-white/15 shadow-2xl shadow-black/50">
-              <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/10">
+            <div className="glass-panel p-5 rounded-2xl text-left shadow-2xl shadow-black/60" style={{ border: "1px solid rgba(0,212,255,0.12)" }}>
+              <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/8">
                 <div className="flex items-center gap-2.5">
                   <ShieldCheck className="w-5 h-5 text-primary" />
-                  <h3 className="font-display font-bold text-base text-white">Static v2.0</h3>
+                  <h3 className="font-display font-bold text-sm text-white tracking-wide">Static v2.0</h3>
                 </div>
                 <div className="flex items-center gap-1.5 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
@@ -123,10 +114,10 @@ export function Hero() {
                   "Bypass Detection"
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 shrink-0">
+                    <div className="w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center border border-primary/25 shrink-0">
                       <Check className="w-3 h-3 text-primary" strokeWidth={3} />
                     </div>
-                    <span className="text-sm text-gray-300 font-medium">{feature}</span>
+                    <span className="text-xs text-gray-300 font-medium">{feature}</span>
                   </div>
                 ))}
               </div>

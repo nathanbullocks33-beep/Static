@@ -28,14 +28,13 @@ export function CursorGlow() {
   return (
     <div
       ref={glowRef}
-      className="pointer-events-none fixed z-[9999] opacity-0 transition-opacity duration-300"
+      className="pointer-events-none fixed z-[9999] opacity-0 transition-opacity duration-200"
       style={{
-        width: "600px",
-        height: "600px",
+        width: "700px",
+        height: "700px",
         transform: "translate(-50%, -50%)",
-        background: "radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(124, 58, 237, 0.05) 40%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(139, 92, 246, 0.28) 0%, rgba(109, 40, 217, 0.14) 35%, rgba(76, 29, 149, 0.06) 60%, transparent 75%)",
         borderRadius: "50%",
-        filter: "blur(2px)",
       }}
     />
   );

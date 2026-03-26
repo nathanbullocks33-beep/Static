@@ -1,36 +1,34 @@
 import { motion } from "framer-motion";
-import { Gamepad2, ArrowUpRight, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowUpRight, Shield } from "lucide-react";
 
 export function SupportedGames() {
   return (
-    <section id="supported-games" className="py-32 relative bg-[#0a0a0f]">
-      {/* Top subtle gradient line separator */}
+    <section id="supported-games" className="py-32 relative bg-[#0a0a0f] w-full">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient mb-5"
           >
             Supported Games
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto"
+            className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto"
           >
             Hand-picked games with deep script integration and absolute dominance.
           </motion.p>
         </div>
 
         <div className="flex justify-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
@@ -39,61 +37,62 @@ export function SupportedGames() {
           >
             <div className="glass-panel glass-panel-hover p-3 rounded-[2rem] overflow-hidden group">
               <div className="relative p-6 sm:p-8 z-10 flex flex-col md:flex-row items-center md:items-start gap-8">
-                
-                {/* Left: Icon Area */}
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-gradient-to-br from-primary/30 to-blue-900/40 flex items-center justify-center flex-shrink-0 border border-primary/20 shadow-inner relative overflow-hidden group-hover:border-primary/50 transition-colors duration-500">
-                  <div className="absolute inset-0 bg-primary/10 blur-xl"></div>
-                  <Gamepad2 className="w-16 h-16 text-primary drop-shadow-[0_0_15px_rgba(0,212,255,0.5)] z-10" />
+
+                {/* Game Image */}
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden flex-shrink-0 border border-white/10 shadow-xl shadow-black/60 group-hover:border-primary/40 transition-colors duration-500">
+                  <img
+                    src="/images/fias-game.png"
+                    alt="[BUFF] Fight in a school"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                
-                {/* Right: Content Area */}
+
+                {/* Content */}
                 <div className="flex-1 flex flex-col w-full">
-                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
-                    <div>
-                      <h3 className="text-3xl font-display font-bold text-white mb-3">
-                        [BUFF] Fight in a school
-                      </h3>
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span className="inline-flex items-center px-3 py-1 rounded-lg text-sm font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                          Roblox
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
-                          <Shield className="w-4 h-4" />
-                          Fully Supported
-                        </span>
-                      </div>
+                  <div className="mb-4">
+                    <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-3">
+                      [BUFF] Fight in a school
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      <span className="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider">
+                        Roblox
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20 uppercase tracking-wider">
+                        <Shield className="w-3.5 h-3.5" />
+                        Fully Supported
+                      </span>
                     </div>
                   </div>
-                  
-                  <div className="flex flex-wrap gap-2 mb-8 mt-2">
-                    {["Aimbot", "ESP", "Auto Farm", "Speed Hack"].map(tag => (
+
+                  <div className="flex flex-wrap gap-2 mb-8 mt-3">
+                    {["Auto Farm", "Teleportation", "Money Farm", "Reliable", "Speed Hack"].map(tag => (
                       <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-gray-300">
                         {tag}
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="mt-auto flex flex-col sm:flex-row gap-4">
-                    <a 
+                    <a
                       href="https://static.sellhub.cx/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center py-3.5 px-6 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 glow-cyan transition-all duration-300"
+                      className="flex-1 inline-flex items-center justify-center py-3.5 px-6 rounded-xl bg-primary text-white text-sm font-bold hover:bg-primary/90 shadow-[0_0_25px_rgba(0,212,255,0.3)] hover:shadow-[0_0_40px_rgba(0,212,255,0.45)] hover:-translate-y-0.5 transition-all duration-300 uppercase tracking-wider"
                     >
                       Get Script
                     </a>
-                    <a 
+                    <a
                       href="https://www.roblox.com/games/17698425045/fight-in-a-school"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all duration-300"
+                      className="flex-1 inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white text-sm font-medium transition-all duration-300"
                     >
                       Play on Roblox
                       <ArrowUpRight className="w-4 h-4 text-gray-400" />
                     </a>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </motion.div>
